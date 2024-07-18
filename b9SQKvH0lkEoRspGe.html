@@ -1,0 +1,210 @@
+<html><head><base href="https://historialternativa.com"><title>Historia Alternativa - Explora los "Qué pasaría si..."</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+  :root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --card-background: #ffffff;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h1, h2 {
+    color: var(--secondary-color);
+  }
+
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .search-form {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .search-form input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+
+  .search-form input[type="submit"] {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-form input[type="submit"]:hover {
+    background-color: var(--accent-color);
+  }
+
+  .examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .example-item {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .example-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+  }
+
+  .featured-scenarios {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .scenario-card {
+    flex: 0 0 300px;
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .scenario-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .scenario-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+  }
+
+  .scenario-card p {
+    font-size: 0.9rem;
+  }
+
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">Historia Alternativa</div>
+    
+    <div class="card">
+      <h1>Explora los "Qué pasaría si..." de la Historia</h1>
+      <p>Bienvenido a Historia Alternativa, donde puedes descubrir cómo podría haber cambiado el mundo si los eventos históricos hubieran ocurrido de manera diferente. Nuestra avanzada IA analiza múltiples factores y variables para crear escenarios alternativos plausibles basados en el conocimiento histórico y el análisis de expertos.</p>
+    </div>
+
+    <div class="card">
+      <form class="search-form" action="/buscar" method="GET">
+        <input type="text" name="query" placeholder="Ej: ¿Qué hubiera pasado si Napoleón hubiera ganado en Waterloo?">
+        <input type="submit" value="Explorar">
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Escenarios destacados</h2>
+      <div class="featured-scenarios">
+        <div class="scenario-card">
+          <h3>La victoria soviética en la Guerra Fría</h3>
+          <p>Descubre cómo el mundo habría cambiado si la URSS hubiera triunfado sobre los Estados Unidos...</p>
+          <a href="/buscar?query=¿Cómo+sería+el+mundo+si+la+Unión+Soviética+hubiera+ganado+la+Guerra+Fría?" class="read-more">Leer más</a>
+        </div>
+        <div class="scenario-card">
+          <h3>La supervivencia del Imperio Romano</h3>
+          <p>Explora un mundo donde Roma nunca cayó y continuó dominando Europa y el Mediterráneo...</p>
+          <a href="/buscar?query=¿Qué+pasaría+si+el+Imperio+Romano+nunca+hubiera+caído?" class="read-more">Leer más</a>
+        </div>
+        <div class="scenario-card">
+          <h3>La Revolución Industrial en China</h3>
+          <p>Imagina cómo sería el equilibrio global si China hubiera liderado la Revolución Industrial...</p>
+          <a href="/buscar?query=¿Cómo+cambiaría+el+mundo+si+la+Revolución+Industrial+hubiera+comenzado+en+China?" class="read-more">Leer más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Explora más escenarios</h2>
+      <div class="examples">
+        <div class="example-item">¿Qué hubiera pasado si los aztecas hubieran derrotado a los conquistadores españoles?</div>
+        <div class="example-item">¿Cómo sería el mundo si la peste negra no hubiera ocurrido en Europa?</div>
+        <div class="example-item">¿Qué consecuencias habría tenido que los aliados perdieran la Segunda Guerra Mundial?</div>
+        <div class="example-item">¿Cómo habría evolucionado la tecnología si la Guerra Fría se hubiera centrado en la exploración espacial?</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.example-item').forEach(item => {
+      item.addEventListener('click', function() {
+        document.querySelector('input[name="query"]').value = this.textContent;
+      });
+    });
+  </script>
+</body></html>
